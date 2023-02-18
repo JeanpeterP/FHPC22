@@ -13,6 +13,7 @@ class PetInline(admin.TabularInline):
 class AccountAdmin(UserAdmin):
     model = Account
     list_display = (
+        'account_number',
         'username',
         'email',
         'first_name',
@@ -33,6 +34,7 @@ admin.site.register(Account, AccountAdmin)
 class PetAdmin(admin.ModelAdmin):
     model = Pet
     list_display = (
+        'pet_number',
         'name',
         'breed',
         'age',

@@ -13,4 +13,11 @@ class AccountEncoder(ModelEncoder):
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
-        fields = ["username", "email", "password", "first_name", "last_name"]
+        fields = ["pk", "username", "email", "password", "first_name", "last_name"]
+
+class PetSerializer(serializers.ModelSerializer):
+    owner = AccountSerializer(many=False)
+    
+    class Meta:
+        model = Pet
+        fields = ["name", "breed", "age", "weight", "owner"]
