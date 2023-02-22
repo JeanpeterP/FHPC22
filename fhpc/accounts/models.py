@@ -64,3 +64,7 @@ class Pet(models.Model):
                 break
         else:
             super(Pet, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
+

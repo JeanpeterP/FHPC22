@@ -42,4 +42,5 @@ class PetAdmin(admin.ModelAdmin):
         'owner'
     )
 
+        
 admin.site.register(Pet, PetAdmin)

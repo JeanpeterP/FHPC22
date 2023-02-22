@@ -1,1 +1,1 @@
-web: gunicorn fhpc.wsgi --log--file -
+web: gunicorn fhpc.wsgi --log-file -
